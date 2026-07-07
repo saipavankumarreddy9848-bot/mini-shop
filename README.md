@@ -124,3 +124,5 @@ on every push to `main` once GitHub secrets are configured).
 - Payment is simulated, not integrated with a real processor
 - Cart is in-memory (not DynamoDB) — fine for a single task, would need a
   shared store before running more than one backend replica
+
+_Last updated: Tue Jul  7 04:22:12 UTC 2026_
