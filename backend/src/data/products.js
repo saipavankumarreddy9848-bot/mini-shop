@@ -47,7 +47,8 @@ const products = [
   { id: 'p031', name: 'Aviator Sunglasses', description: 'UV protection, polarized lenses.', price: 899, category: 'accessories', stock: 35, imageUrl: 'https://placehold.co/400x400/eee/31343C?text=Sunglasses' },
   { id: 'p032', name: 'Canvas Backpack', description: '20L capacity, laptop compartment.', price: 1599, category: 'accessories', stock: 28, imageUrl: 'https://placehold.co/400x400/eee/31343C?text=Backpack' },
   { id: 'p033', name: 'Analog Wrist Watch', description: 'Stainless steel strap, water-resistant.', price: 1899, category: 'accessories', stock: 22, imageUrl: 'https://placehold.co/400x400/eee/31343C?text=Watch' },
-  { id: 'p034', name: 'fastrack analog watch', description: 'stainless steel strap, water-resistant.;, ip-68 resistant', price: 4500, category: 'accessories', stock: 1, imageUrl: 'https://placehold.co/400x400/eee/31343C?text=Watch' }
+  { id: 'p034', name: 'fastrack analog watch', description: 'stainless steel strap, water-resistant.;, ip-68 resistant', price: 4500, category: 'accessories', stock: 1, imageUrl: 'https://placehold.co/400x400/eee/31343C?text=Watch' },
+  { id: 'p035', name: 'Thor', description: '4 whiller car, 4 cylender, 4 seater', price:2100000, category: 'vehicles', stock:11, imageUrl: 'https://placehold.co/600x600/eee/31343C?text=Mahendra+Thor' }
 ];
 
 module.exports = products;
