@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { api } from '../api';
 import { useCart } from '../CartContext.jsx';
+import { formatPrice } from '../formatPrice';
 
 export default function ProductPage() {
   const { id } = useParams();
@@ -44,7 +45,7 @@ export default function ProductPage() {
         <div className="product-detail-info">
           <p className="product-card-category">{product.category}</p>
           <h1>{product.name}</h1>
-          <p className="product-detail-price">${product.price.toFixed(2)}</p>
+          <p className="product-detail-price">{formatPrice(product.price)}</p>
           <p className="product-detail-description">{product.description}</p>
           <p className={`stock-status ${product.stock < 10 ? 'low' : ''}`}>
             {product.stock > 0 ? `${product.stock} in stock` : 'Out of stock'}

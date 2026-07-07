@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../CartContext.jsx';
+import { formatPrice } from '../formatPrice';
 
 export default function CartPage() {
   const { cart, updateQuantity, removeItem } = useCart();
@@ -24,14 +25,14 @@ export default function CartPage() {
           <div key={item.productId} className="cart-item">
             <div className="cart-item-info">
               <h3>{item.name}</h3>
-              <p>${item.price.toFixed(2)}</p>
+              <p>{formatPrice(item.price)}</p>
             </div>
             <div className="quantity-selector">
               <button onClick={() => updateQuantity(item.productId, Math.max(1, item.quantity - 1))}>-</button>
               <span>{item.quantity}</span>
               <button onClick={() => updateQuantity(item.productId, item.quantity + 1)}>+</button>
             </div>
-            <p className="cart-item-subtotal">${(item.price * item.quantity).toFixed(2)}</p>
+            <p className="cart-item-subtotal">{formatPrice(item.price * item.quantity)}</p>
             <button className="remove-btn" onClick={() => removeItem(item.productId)}>
               Remove
             </button>
@@ -40,7 +41,7 @@ export default function CartPage() {
       </div>
       <div className="cart-summary">
         <p>
-          Total: <strong>${cart.total.toFixed(2)}</strong>
+          Total: <strong>{formatPrice(cart.total)}</strong>
         </p>
         <button className="btn-primary" onClick={() => navigate('/checkout')}>
           Proceed to Checkout

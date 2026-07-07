@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { api } from '../api';
 import ProductCard from '../components/ProductCard.jsx';
 
-const CATEGORIES = ['all', 'electronics', 'apparel', 'fitness', 'home'];
+const CATEGORIES = ['all', 'electronics', 'apparel', 'footwear', 'fitness', 'home', 'accessories'];
 
 export default function HomePage() {
   const [products, setProducts] = useState([]);

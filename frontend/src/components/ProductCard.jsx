@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { formatPrice } from '../formatPrice';
 
 export default function ProductCard({ product }) {
   return (
@@ -9,7 +10,7 @@ export default function ProductCard({ product }) {
       <div className="product-card-info">
         <p className="product-card-category">{product.category}</p>
         <h3 className="product-card-name">{product.name}</h3>
-        <p className="product-card-price">${product.price.toFixed(2)}</p>
+        <p className="product-card-price">{formatPrice(product.price)}</p>
       </div>
     </Link>
   );

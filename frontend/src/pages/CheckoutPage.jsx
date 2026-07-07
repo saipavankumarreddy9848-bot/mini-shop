@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../api';
 import { useCart } from '../CartContext.jsx';
+import { formatPrice } from '../formatPrice';
 
 export default function CheckoutPage() {
   const { cart, refreshCart } = useCart();
@@ -46,7 +47,7 @@ export default function CheckoutPage() {
           </label>
           {error && <p className="status-text error">{error}</p>}
           <button type="submit" className="btn-primary" disabled={submitting}>
-            {submitting ? 'Placing Order...' : `Place Order - $${cart.total.toFixed(2)}`}
+            {submitting ? 'Placing Order...' : `Place Order - ${formatPrice(cart.total)}`}
           </button>
         </form>
 
@@ -57,12 +58,12 @@ export default function CheckoutPage() {
               <span>
                 {item.name} × {item.quantity}
               </span>
-              <span>${(item.price * item.quantity).toFixed(2)}</span>
+              <span>{formatPrice(item.price * item.quantity)}</span>
             </div>
           ))}
           <div className="summary-line total">
             <span>Total</span>
-            <span>${cart.total.toFixed(2)}</span>
+            <span>{formatPrice(cart.total)}</span>
           </div>
         </div>
       </div>
