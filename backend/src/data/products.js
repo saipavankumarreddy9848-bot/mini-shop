@@ -46,7 +46,8 @@ const products = [
   { id: 'p030', name: 'Leather Wallet', description: 'Genuine leather, RFID protected, slim design.', price: 799, category: 'accessories', stock: 40, imageUrl: 'https://placehold.co/400x400/eee/31343C?text=Wallet' },
   { id: 'p031', name: 'Aviator Sunglasses', description: 'UV protection, polarized lenses.', price: 899, category: 'accessories', stock: 35, imageUrl: 'https://placehold.co/400x400/eee/31343C?text=Sunglasses' },
   { id: 'p032', name: 'Canvas Backpack', description: '20L capacity, laptop compartment.', price: 1599, category: 'accessories', stock: 28, imageUrl: 'https://placehold.co/400x400/eee/31343C?text=Backpack' },
-  { id: 'p033', name: 'Analog Wrist Watch', description: 'Stainless steel strap, water-resistant.', price: 1899, category: 'accessories', stock: 22, imageUrl: 'https://placehold.co/400x400/eee/31343C?text=Watch' }
+  { id: 'p033', name: 'Analog Wrist Watch', description: 'Stainless steel strap, water-resistant.', price: 1899, category: 'accessories', stock: 22, imageUrl: 'https://placehold.co/400x400/eee/31343C?text=Watch' },
+  { id: 'p034', name: 'fastrack analog watch', description: 'stainless steel strap, water-resistant.;, ip-68 resistant', price: 4500, category: 'accessories', stock: 1, imageurl: 'https://placehold.co/400x400/eee/31343C?text=Watch' }
 ];
 
 module.exports = products;
